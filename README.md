@@ -1388,6 +1388,21 @@ Math.min() > Math.max() // -> true
 
 * [Why is Math.max() less than Math.min()?](https://charlieharvey.org.uk/page/why_math_max_is_less_than_math_min) by Charlie Harvey
 
+
+## Accessing properties on primitive types
+
+``` js
+null.k // Type Error
+undefined.k // Type Error
+true.k // undefined
+"oho".k // undefined
+22[k] // undefined
+```
+
+### 💡 Explanation:
+
+* Whatever is to the left of the property has to pass throug a ToObject conversion specified in https://es5.github.io/#x9.9
+
 ## Comparing `null` to `0`
 
 The following expressions seem to introduce a contradiction:
